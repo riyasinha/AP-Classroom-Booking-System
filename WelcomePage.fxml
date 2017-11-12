@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="WelcomePane" prefHeight="287.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.WelcomePageController">
+   <children>
+      <AnchorPane layoutX="-97.0" layoutY="-80.0" prefHeight="280.0" prefWidth="297.0">
+         <children>
+            <Label fx:id="email" layoutX="174.0" layoutY="132.0" text="Email ID" />
+            <Label fx:id="pswd" layoutX="171.0" layoutY="196.0" text="Password" />
+         </children>
+      </AnchorPane>
+      <PasswordField fx:id="pswd_text" layoutX="218.0" layoutY="109.0" />
+      <TextField fx:id="email_text" layoutX="218.0" layoutY="48.0" />
+      <Separator fx:id="welcomeSep" layoutX="118.0" layoutY="221.0" prefWidth="200.0" />
+      <Button fx:id="login" layoutX="187.0" layoutY="155.0" mnemonicParsing="false"  text="Login " />
+      <Button fx:id="signup" layoutX="152.0" layoutY="233.0" mnemonicParsing="false" onAction="#SignUpButtonHandler" text="New User? SignUp!" />
+      <Button fx:id="for_pswd" layoutX="158.0" layoutY="188.0" mnemonicParsing="false" text="Forgot Password" />
+      <Label fx:id="stat" layoutX="197.0" layoutY="14.0" prefHeight="17.0" prefWidth="44.0" text="Stat" />
+   </children>
+</AnchorPane>
