@@ -1,5 +1,7 @@
 package application;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
@@ -14,7 +16,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class WelcomePageController {
-
+	public static final String FILENAME = "C:\\Users\\khyati\\eclipse-workspace-oxygen\\try\\src\\admin.txt";
 	@FXML
 	private Label email;
 	
@@ -38,6 +40,53 @@ public class WelcomePageController {
 	
 	@FXML
 	private Label stat;
+	
+	
+	public void LoginHandler(ActionEvent e) throws IOException
+	{
+		
+
+		if(e.getSource()== login)
+		{
+			
+			try {
+				FileReader  in = new FileReader(FILENAME);
+		        BufferedReader br = new BufferedReader(in);
+		        String input ;
+		        boolean flag = false;
+		        String EnteredName = email_text.getText();
+		       // System.out.println(EnteredName);
+		        
+				String EnteredPassword = pswd_text.getText();
+				//System.out.println(EnteredPassword);
+			
+		        while ((input = br.readLine()) != null) 
+		        {
+		        	String[] split = input.split("\\s");
+		        	
+		        	
+		            if (EnteredName.equals(split[0]) && EnteredPassword.equals(split[1])) {
+		            	flag = true;
+		            	}
+		            
+		        }
+		        if(flag==true)
+		        {
+		        System.out.println("CONGRATS");
+		        }
+		        else
+		        {
+		        	System.out.println("TRY AGAIN");
+		        }
+
+				}
+			catch (IOException ev) 
+			{
+		        ev.getCause();
+		    }
+			
+		}
+	}
 	
 	public void SignUpButtonHandler(ActionEvent e) throws IOException
 	{
