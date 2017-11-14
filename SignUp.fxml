@@ -1,21 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="278.0" prefWidth="452.0"  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SignUpPageController">
+<AnchorPane prefHeight="462.0" prefWidth="503.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SignUpPageController">
    <children>
-      <Label fx:id="lblsignup" layoutX="186.0" layoutY="23.0" text="Sign Up Page" />
-      <Label fx:id="lblname" layoutX="78.0" layoutY="71.0" text="Name" />
-      <Label fx:id="lbltype" layoutX="78.0" layoutY="108.0" text="User Type" />
-      <Label fx:id="lblpswd" layoutX="78.0" layoutY="148.0" text="Enter Password" />
-      <Label fx:id="lblrepswd" layoutX="78.0" layoutY="187.0" text="Re-Enter Password" />
-      <TextField fx:id="txtname" layoutX="244.0" layoutY="67.0" />
-      <PasswordField fx:id="txtpswd" layoutX="244.0" layoutY="144.0" />
-      <PasswordField fx:id="txtrepsewd" layoutX="245.0" layoutY="183.0" />
-      <ChoiceBox fx:id="txtuser" layoutX="245.0" layoutY="104.0" prefWidth="150.0" AnchorPane.rightAnchor="57.0" />
-      <Button fx:id="btnsignup" layoutX="200.0" layoutY="229.0" mnemonicParsing="false" onAction="#NewUserHandler" text="Sign Up" />
+      <Label fx:id="lblsignup" layoutX="171.0" layoutY="16.0" prefHeight="25.0" prefWidth="185.0" text="   SIGN UP USING YOUR IIITD ID" />
+      <Label fx:id="lblfirstname" layoutX="86.0" layoutY="71.0" text="First Name" />
+      <Label fx:id="lbltype" layoutX="86.0" layoutY="206.0" text="User Type" />
+      <Label fx:id="lblpswd" layoutX="90.0" layoutY="300.0" text="Enter Password" />
+      <Label fx:id="lblrepswd" layoutX="90.0" layoutY="335.0" text="Re-Enter Password" />
+      <TextField fx:id="txtfirstname" layoutX="244.0" layoutY="67.0" />
+      <PasswordField fx:id="txtpswd" layoutX="244.0" layoutY="296.0" />
+      <PasswordField fx:id="txtrepsewd" layoutX="244.0" layoutY="331.0" />
+      <Button fx:id="btnsignup" layoutX="193.0" layoutY="400.0" mnemonicParsing="false" onAction="#NewUserHandler" text="Sign Up" />
+      <TextField fx:id="txtlastname" layoutX="244.0" layoutY="108.0" />
+      <Label fx:id="lbllastname" layoutX="86.0" layoutY="108.0" prefHeight="25.0" prefWidth="66.0" text="Last Name" />
+      <Label fx:id="lblemailid" layoutX="86.0" layoutY="149.0" prefHeight="25.0" prefWidth="58.0" text="Email Id" />
+      <TextField fx:id="txtemailid" layoutX="244.0" layoutY="149.0" text="\@iiitd.ac.in" />
+      <RadioButton fx:id="radiostudent" layoutX="165.0" layoutY="206.0" mnemonicParsing="false" text="Student">
+         <toggleGroup>
+            <ToggleGroup fx:id="user" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radiofaculty" layoutX="275.0" layoutY="206.0" mnemonicParsing="false" text="Faculty" toggleGroup="$user" />
+      <RadioButton fx:id="radioadmin" layoutX="393.0" layoutY="206.0" mnemonicParsing="false" text="Admin" toggleGroup="$user" />
+      <Label fx:id="lblgender" layoutX="86.0" layoutY="247.0" prefHeight="25.0" prefWidth="53.0" text="Gender" />
+      <RadioButton fx:id="radiomale" layoutX="165.0" layoutY="251.0" mnemonicParsing="false" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radiofemale" layoutX="275.0" layoutY="251.0" mnemonicParsing="false" text="Female" toggleGroup="$gender" />
+      <RadioButton fx:id="radioother" layoutX="395.0" layoutY="251.0" mnemonicParsing="false" text="Other" toggleGroup="$gender" />
    </children>
 </AnchorPane>
