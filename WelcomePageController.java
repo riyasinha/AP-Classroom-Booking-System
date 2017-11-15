@@ -16,7 +16,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class WelcomePageController {
-	public static final String FILENAME = "C:\\Users\\khyati\\eclipse-workspace-oxygen\\try\\src\\admin.txt";
+	public static final String FILENAME = "C:\\Users\\khyati\\eclipse-workspace-oxygen\\try\\src\\jaimatadi.txt";
+	//private static final char[][]  = null;
 	@FXML
 	private Label email;
 	
@@ -52,13 +53,16 @@ public class WelcomePageController {
 			try {
 				FileReader  in = new FileReader(FILENAME);
 		        BufferedReader br = new BufferedReader(in);
-		        String input ;
+		        String input;
 		        boolean flag = false;
+		        String user = null;
+		        //int lol = 0;
 		        String EnteredName = email_text.getText();
 		       // System.out.println(EnteredName);
 		        
 				String EnteredPassword = pswd_text.getText();
 				//System.out.println(EnteredPassword);
+				//String[] split = input.split("\\s");
 			
 		        while ((input = br.readLine()) != null) 
 		        {
@@ -67,19 +71,23 @@ public class WelcomePageController {
 		        	
 		            if (EnteredName.equals(split[0]) && EnteredPassword.equals(split[1])) {
 		            	flag = true;
-		            	}
+		            	 user = (split[2]);
 		            
+		            }
 		        }
-		        if(flag==true)
+		        if(flag==true )
 		        {
-		        System.out.println("CONGRATS");
+		        	System.out.println("Congrats");
+		        	System.out.println(user);
 		        }
+		       
 		        else
 		        {
 		        	System.out.println("TRY AGAIN");
 		        }
+			}
 
-				}
+				
 			catch (IOException ev) 
 			{
 		        ev.getCause();
