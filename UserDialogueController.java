@@ -23,19 +23,20 @@ public class UserDialogueController extends WelcomePageController {
 	{
 		if(e.getSource()== btnviewprofile)
 		{
-			System.out.println(user);
-			if(user=="Student")
+			//System.out.println(user);
+			if(user.equalsIgnoreCase("Student"))
 			{
 				System.out.print("YOU ARE A STUDENT");
 			}
-			if(user=="Faculty")
+			if(user.equalsIgnoreCase("Faculty"))
 			{
 				System.out.print("YOU ARE A FACULTY");
 			}
-			if(user=="Admin")
+			if(user.equalsIgnoreCase("Admin"))
 			{
 				System.out.print("YOU ARE A ADMIN");
 			}
+			
 		}
 	
 	}
