@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UserDialogueController">
+   <children>
+      <Label fx:id="lblstatus" layoutX="58.0" layoutY="3.0" prefHeight="76.0" prefWidth="516.0" text="    YOU HAVE SUCCESSFULLY LOGGED IN YOUR ACCOUNT" textFill="#961000">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnviewprofile" layoutX="233.0" layoutY="289.0" mnemonicParsing="false" onAction="#ViewProfileHandler" prefHeight="46.0" prefWidth="136.0" text="VIEW PROFILE" />
+      <ImageView fitHeight="186.0" fitWidth="275.0" layoutX="187.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Desktop/iiitdelhi.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

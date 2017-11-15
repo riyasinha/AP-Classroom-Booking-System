@@ -41,7 +41,8 @@ public class WelcomePageController {
 	
 	@FXML
 	private Label stat;
-	
+	static public String user = null;
+	static public boolean flag = false; 
 	
 	public void LoginHandler(ActionEvent e) throws IOException
 	{
@@ -54,8 +55,8 @@ public class WelcomePageController {
 				FileReader  in = new FileReader(FILENAME);
 		        BufferedReader br = new BufferedReader(in);
 		        String input;
-		        boolean flag = false;
-		        String user = null;
+		        //boolean flag = false;
+		        
 		        //int lol = 0;
 		        String EnteredName = email_text.getText();
 		       // System.out.println(EnteredName);
@@ -79,6 +80,14 @@ public class WelcomePageController {
 		        {
 		        	System.out.println("Congrats");
 		        	System.out.println(user);
+		        	Stage stage = null;
+		    		Parent root = null;
+		    		stage = (Stage) login.getScene().getWindow();
+					root = FXMLLoader.load(getClass().getResource("/application/UserDialogue.fxml"));
+					Scene scene = new Scene(root);
+				      stage.setScene(scene);
+				      stage.show();
+
 		        }
 		       
 		        else

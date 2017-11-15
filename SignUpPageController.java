@@ -127,7 +127,7 @@ public class SignUpPageController {
 			}
 			if(radioadmin.isSelected())
 			{
-				uservalue = "Faculty";
+				uservalue = "Admin";
 			}
 			
 				FileWriter fw = new FileWriter(FILENAME,true);
