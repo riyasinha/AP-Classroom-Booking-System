@@ -13,7 +13,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class BookRoom_FacultyController {
+public class BookRoom_FacultyController extends WelcomePageController {
 	
 	@FXML
 	private Label lblpage;
@@ -62,17 +62,20 @@ public class BookRoom_FacultyController {
 	public void BackButtonHandler(ActionEvent e) throws IOException
 	{
 		Stage stage = null;
-		Parent root = null;
-		
-		if(e.getSource()== btnback)
-		{
-			stage = (Stage) btnback.getScene().getWindow();
-			root = FXMLLoader.load(getClass().getResource("/application/FacultyWelcomePage.fxml"));
-		}
-		
+    	Parent root = null;
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/StudentProfilePage.fxml"));
+    	stage = (Stage)btnback.getScene().getWindow();
+    	root = (Parent)loader.load();
+    	FacultyProfilePageController faculty = loader.<FacultyProfilePageController>getController();
+    	//student.displayemail.setText(emailadd.getText());
+	    faculty.displayemail.setText(emailadd);
+		faculty.displayfirstname.setText(firstName);
+		faculty.displaylastname.setText(lastName);
+		faculty.displaygender.setText(gender);
+		faculty.displaytype.setText(user);
 		Scene scene = new Scene(root);
-	      stage.setScene(scene);
-	      stage.show();
+	    stage.setScene(scene);
+	    stage.show();
 
 	}
 	

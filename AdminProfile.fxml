@@ -5,7 +5,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminProfileController">
    <children>
       <Separator layoutX="156.0" layoutY="59.0" orientation="VERTICAL" prefHeight="347.0" prefWidth="32.0" />
@@ -17,11 +16,11 @@
       <Label fx:id="lblusertype" layoutX="261.0" layoutY="164.0" text="User type" />
       <Label fx:id="lblemailid" layoutX="261.0" layoutY="208.0" text="Email Id" />
       <Label fx:id="lblgender" layoutX="263.0" layoutY="255.0" text="Gender" />
-      <Label fx:id="lblsetfirstname" layoutX="360.0" layoutY="65.0" text="*******name********" />
-      <Label fx:id="lblsetlastname" layoutX="360.0" layoutY="114.0" text="*****name 2*******" />
-      <Label fx:id="lblsetusertype" layoutX="360.0" layoutY="164.0" text="*******type******" />
-      <Label fx:id="lblsetemailid" layoutX="360.0" layoutY="208.0" text="******id*****" />
-      <Label fx:id="lblsetgender" layoutX="360.0" layoutY="255.0" text="****gender****" />
+      <Label fx:id="displayfirstname" layoutX="360.0" layoutY="65.0" text="*******name********" />
+      <Label fx:id="displaylastname" layoutX="360.0" layoutY="114.0" text="*****name 2*******" />
+      <Label fx:id="displaytype" layoutX="360.0" layoutY="164.0" text="*******type******" />
+      <Label fx:id="displayemail" layoutX="360.0" layoutY="208.0" text="******id*****" />
+      <Label fx:id="displaygender" layoutX="360.0" layoutY="255.0" text="****gender****" />
       <ImageView fitHeight="65.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../Desktop/iiitdelhi.jpg" />

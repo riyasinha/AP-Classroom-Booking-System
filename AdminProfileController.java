@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -19,37 +20,37 @@ public class AdminProfileController {
 	private Label lbllastname;
 	
 	@FXML
-	private Label lblsetfirstname;
+	 Label displayfirstname;
 	
 	@FXML
-	private Label lblsetlastname;
+	 Label displaylastname;
 	
 	@FXML
 	private Label lblgender;
 	
 	@FXML
-	private Label lblsetgender;
+	 Label displaygender;
 	
 	@FXML
 	private Label lblemailid;
 	
 	@FXML
-	private Label lblsetemailid;
+	 Label displayemail;
 	
 	@FXML
 	private Label lblusertype;
 	
 	@FXML
-	private Label lblsetusertype;
+	 Label displaytype;
 	
 	@FXML
-	private Label btnuploadimage;
+	private Button btnuploadimage;
 	
 	@FXML
-	private Label btnbookroom;
+	private Button btnbookroom;
 	
 	@FXML
-	private Label btnviewroomrequest;
+	private Button btnviewroomrequest;
 	
 	/*@FXML
 	private Image */

@@ -13,7 +13,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
-public class ViewCourses_studentController {
+public class ViewCourses_studentController extends WelcomePageController{
 
 	@FXML
 	private Label lblstdcourses;
@@ -27,20 +27,39 @@ public class ViewCourses_studentController {
 	@FXML
 	private Button btnback;
 	
+	
+	
 	public void BackButtonHandler(ActionEvent e) throws IOException
 	{
-		Stage stage = null;
-		Parent root = null;
+		//Stage stage = null;
+		//Parent root = null;
 		
 		if(e.getSource()== btnback)
 		{
-			stage = (Stage) btnback.getScene().getWindow();
-			root = FXMLLoader.load(getClass().getResource("/application/StudentProfilePage.fxml"));
+			
+			
+//			stage = (Stage) btnback.getScene().getWindow();
+//			root = FXMLLoader.load(getClass().getResource("/application/StudentProfilePage.fxml"));
+			Stage stage = null;
+        	Parent root = null;
+        	FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/StudentProfilePage.fxml"));
+        	stage = (Stage)btnback.getScene().getWindow();
+        	root = (Parent)loader.load();
+        	StudentProfilePageController student = loader.<StudentProfilePageController>getController();
+        	//student.displayemail.setText(emailadd.getText());
+		    student.displayemail.setText(emailadd);
+    		student.displayfirstname.setText(firstName);
+    		student.displaylastname.setText(lastName);
+    		student.displaygender.setText(gender);
+    		student.displaytype.setText(user);
+    		Scene scene = new Scene(root);
+		    stage.setScene(scene);
+		    stage.show();
 		}
 		
-		Scene scene = new Scene(root);
-	      stage.setScene(scene);
-	      stage.show();
+//		Scene scene = new Scene(root);
+//	      stage.setScene(scene);
+//	      stage.show();
 
 	}
 }
