@@ -68,7 +68,24 @@ public class StudentProfilePageController extends UserDialogueController{
 	@FXML
 	public Label displayemail;
 	
+	@FXML
+	public Button btnlogout;
 	
+	public void LogOutHandler(ActionEvent e)throws IOException
+	{
+		Stage stage = null;
+		Parent root = null;
+		
+		if(e.getSource()== btnlogout)
+		{
+			stage = (Stage) btnlogout.getScene().getWindow();
+			root = FXMLLoader.load(getClass().getResource("/application/WelcomePage.fxml"));
+		}
+		
+		Scene scene = new Scene(root);
+	      stage.setScene(scene);
+	      stage.show();
+	}
 	
 	
 	public void ViewRoomRequestsHandler(ActionEvent e)throws IOException

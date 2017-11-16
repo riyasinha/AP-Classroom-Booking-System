@@ -4,11 +4,15 @@ import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 
 public class AdminProfileController {
@@ -64,7 +68,24 @@ public class AdminProfileController {
 	@FXML
 	private ImageView imageview;
 	
+	@FXML
+	public Button btnlogout;
 	
+	public void LogOutHandler(ActionEvent e)throws IOException
+	{
+		Stage stage = null;
+		Parent root = null;
+		
+		if(e.getSource()== btnlogout)
+		{
+			stage = (Stage) btnlogout.getScene().getWindow();
+			root = FXMLLoader.load(getClass().getResource("/application/WelcomePage.fxml"));
+		}
+		
+		Scene scene = new Scene(root);
+	      stage.setScene(scene);
+	      stage.show();
+	}
 	
 	public void UploadphotoHandler(ActionEvent e) throws IOException
 	{

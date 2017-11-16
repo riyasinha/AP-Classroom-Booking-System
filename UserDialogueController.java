@@ -130,7 +130,7 @@ public class UserDialogueController extends WelcomePageController {
 	        	System.out.println(user);
 	        	Stage stage = null;
 	        	Parent root = null;
-	        	FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/StudentProfilePage.fxml"));
+	        	FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/FacultyWelcomePage.fxml"));
 	        	stage = (Stage)btnviewprofile.getScene().getWindow();
 	        	root = (Parent)loader.load();
 	        	FacultyProfilePageController faculty = loader.<FacultyProfilePageController>getController();

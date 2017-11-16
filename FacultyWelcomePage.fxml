@@ -31,5 +31,6 @@
       <Label fx:id="displayfirstname" layoutX="357.0" layoutY="106.0" prefHeight="17.0" prefWidth="103.0" text="*******name*******" />
       <Label fx:id="lblgender" layoutX="275.0" layoutY="189.0" text="Gender:" />
       <Label fx:id="displaygender" layoutX="365.0" layoutY="189.0" text="*****gender*****" />
+      <Button fx:id="btnlogout" layoutX="389.0" layoutY="25.0" mnemonicParsing="false" onAction="#LogOutHandler" text="Log Out" />
    </children>
 </AnchorPane>
