@@ -5,15 +5,18 @@ import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.io.FileWriter;
-import java.io.IOException;
 import javafx.scene.control.RadioButton;
 import java.io.BufferedWriter;
 
@@ -22,14 +25,16 @@ import java.util.Scanner;
 
 
 
-public class SignUpPageController {
+public class SignUpPageController extends WelcomePageController {
 	
-	public static final String FILENAME = "C:\\Users\\khyati\\eclipse-workspace-oxygen\\try\\src\\jaimatadi.txt";
+	public static final String FILENAME = "C:\\Users\\riyas\\eclipse-workspace-oxygen\\AP Project - ClassRoom Booking\\src\\users.txt";
 	static Scanner sc = new Scanner(System.in);
-	static String name;
+	static String email;
+	static String Firstname;
+	static String Lastname;
 	static String password;
 	String uservalue;
-	int gendervalue;
+	String gendervalue;
 	
 	@FXML
 	private Label lblfirstname;
@@ -103,19 +108,19 @@ public class SignUpPageController {
 	{
 		if(e.getSource()== btnsignup)
 		{
-			final String Firstname = txtfirstname.getText();
-			final String Lastname = txtlastname.getText();
+			Firstname = txtfirstname.getText();
+			Lastname = txtlastname.getText();
 			if(radiomale.isSelected())
 			{
-				gendervalue = 0;
+				gendervalue = "Male";
 			}
 			if(radiofemale.isSelected())
 			{
-				gendervalue = 1;
+				gendervalue = "Female";
 			}
 			if(radioother.isSelected())
 			{
-				gendervalue = 2;
+				gendervalue = "Others";
 			}
 			if(radiostudent.isSelected())
 			{
@@ -135,10 +140,10 @@ public class SignUpPageController {
 				bw.newLine();
 				
 				try {
-					name = txtemailid.getText();
+					email = txtemailid.getText();
 					password = txtpswd.getText();
 					//System.out.println(name + " " + password);
-					bw.write(name + " " +password + " " + uservalue + " " + gendervalue);
+					bw.write(email + " " +password + " " + uservalue + " " + gendervalue + " " + Firstname + " " +Lastname);
 					
 					
 
@@ -160,7 +165,21 @@ public class SignUpPageController {
 
 					}
 				}
+				
+				System.out.println("Congrats");
+	        	System.out.println(user);
+	        	Stage stage = null;
+	    		Parent root = null;
+	    		stage = (Stage) btnsignup.getScene().getWindow();
+	    		root = FXMLLoader.load(getClass().getResource("/application/WelcomePage.fxml"));
+				
+				Scene scene = new Scene(root);
+			    stage.setScene(scene);
+			    stage.show();
+				
 			}
+		
+		
 		}
 	}
 	

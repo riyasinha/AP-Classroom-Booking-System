@@ -16,7 +16,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class WelcomePageController {
-	public static final String FILENAME = "C:\\Users\\khyati\\eclipse-workspace-oxygen\\try\\src\\jaimatadi.txt";
+	public static final String FILENAME = "C:\\Users\\riyas\\eclipse-workspace-oxygen\\AP Project - ClassRoom Booking\\src\\users.txt";
 	//private static final char[][]  = null;
 	@FXML
 	private Label email;
@@ -43,6 +43,11 @@ public class WelcomePageController {
 	private Label stat;
 	static public String user = null;
 	static public boolean flag = false; 
+	
+	static public String emailadd = null;
+	static public String firstName = null;
+	static public String lastName = null;
+	static public String gender = null;
 	
 	public void LoginHandler(ActionEvent e) throws IOException
 	{
@@ -73,6 +78,10 @@ public class WelcomePageController {
 		            if (EnteredName.equals(split[0]) && EnteredPassword.equals(split[1])) {
 		            	flag = true;
 		            	 user = (split[2]);
+		            	 gender = split[3];
+		            	 firstName = split[4];
+		            	 lastName = split[5];
+		            	 emailadd = split[0];
 		            
 		            }
 		        }
@@ -84,6 +93,7 @@ public class WelcomePageController {
 		    		Parent root = null;
 		    		stage = (Stage) login.getScene().getWindow();
 					root = FXMLLoader.load(getClass().getResource("/application/UserDialogue.fxml"));
+					
 					Scene scene = new Scene(root);
 				      stage.setScene(scene);
 				      stage.show();

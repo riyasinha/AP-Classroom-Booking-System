@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="280.0" prefWidth="407.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FacultyProfilePageController">
+   <children>
+      <BorderPane layoutX="-113.0" layoutY="-125.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label fx:id="lblprofilepage" layoutX="158.0" layoutY="5.0" prefHeight="25.0" prefWidth="152.0" text="FACULTY PROFILE PAGE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="lblfirstname" layoutX="274.0" layoutY="106.0" text="First Name:" />
+      <Label fx:id="lbluser" layoutX="274.0" layoutY="147.0" prefHeight="17.0" prefWidth="77.0" text="User Type: " />
+      <Label fx:id="displaylastname" layoutX="357.0" layoutY="126.0" prefHeight="17.0" prefWidth="103.0" text="*******name*******" />
+      <Label fx:id="displaytype" layoutX="355.0" layoutY="147.0" prefHeight="17.0" prefWidth="108.0" text="******user**********" />
+      <Button fx:id="btnviewcour" layoutX="73.0" layoutY="50.0" mnemonicParsing="false" onAction="#ViewCoursessHandler" text="View Courses" />
+      <Button fx:id="btnbookroom" layoutX="82.0" layoutY="94.0" mnemonicParsing="false" onAction="#BookRoomHandler" text="Book Room" />
+      <Button fx:id="btnaddcour" layoutX="79.0" layoutY="228.0" mnemonicParsing="false" text="Add Courses" />
+      <Button fx:id="btnviewtt" layoutX="58.0" layoutY="142.0" mnemonicParsing="false" onAction="#ViewTimeTableHandler" text="View Time Table" />
+      <Button fx:id="btnuploadphoto" layoutX="72.0" layoutY="185.0" mnemonicParsing="false" text="Upload Photo" />
+      <Label fx:id="lblemail" layoutX="274.0" layoutY="168.0" text="Email Address:" />
+      <Label fx:id="displayemail" layoutX="362.0" layoutY="168.0" text="******email*******" />
+      <Separator fx:id="sepvert" layoutX="186.0" layoutY="30.0" orientation="VERTICAL" prefHeight="280.0" prefWidth="4.0" />
+      <ImageView fitHeight="123.0" fitWidth="94.0" layoutX="187.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="lbllastname" layoutX="275.0" layoutY="126.0" text="Last Name:" />
+      <Label fx:id="displayfirstname" layoutX="357.0" layoutY="106.0" prefHeight="17.0" prefWidth="103.0" text="*******name*******" />
+      <Label fx:id="lblgender" layoutX="275.0" layoutY="189.0" text="Gender:" />
+      <Label fx:id="displaygender" layoutX="365.0" layoutY="189.0" text="*****gender*****" />
+   </children>
+</AnchorPane>
