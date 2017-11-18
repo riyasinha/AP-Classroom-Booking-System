@@ -87,7 +87,14 @@ public class StudentProfilePageController extends UserDialogueController{
 	      stage.show();
 	}
 	
-	
+	/**
+	 * 
+	 * @param e this allows the student to view his requests and see the status
+	 * of the requests
+	 * @param btnviewreq this opens in another page ViewRoomRequest_StudentPage
+	 * which displays the status of the request.
+	 * @throws IOException
+	 */
 	public void ViewRoomRequestsHandler(ActionEvent e)throws IOException
 	{
 		Stage stage = null;
@@ -140,4 +147,27 @@ public class StudentProfilePageController extends UserDialogueController{
 	{
 		displayemail.setText(email);
 	}
+	/**
+	 * 
+	 * @param e this offers the student to request a room based on his needs and offers the options for 
+	 * student to fill in
+	 * @param btnreqroom this redirects the student to StudentRequestRoom_Page.fxml
+	 * @throws IOException
+	 */
+	public void RequestRoomHandler(ActionEvent e)throws IOException
+	{
+		Stage stage = null;
+		Parent root = null;
+		
+		if(e.getSource()== btnreqroom)
+		{
+			stage = (Stage) btnreqroom.getScene().getWindow();
+			root = FXMLLoader.load(getClass().getResource("/application/StudentRequestRoom_Page.fxml"));
+		}
+		
+		Scene scene = new Scene(root);
+	      stage.setScene(scene);
+	      stage.show();
+	}
+	
 }

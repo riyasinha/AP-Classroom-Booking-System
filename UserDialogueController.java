@@ -12,9 +12,19 @@ import javafx.scene.control.Label;
 //import javafx.scene.control.Separator;
 import javafx.stage.Stage;
 
-
+/**
+ * 
+ * This opens when one has logged in ito his account.
+ * It allows the person to view his profile
+ *
+ */
 
 public class UserDialogueController extends WelcomePageController {
+	/**
+	 * 
+	 * @para Label lblstatus displays the logged in successful message
+	 * @para Button btnviewprofile opens the profile page
+	 */
 	@FXML
 	private Label lblstatus;
 	
@@ -77,10 +87,18 @@ public class UserDialogueController extends WelcomePageController {
 //	
 	
 	
-	
+	/***
+	 * 
+	 * @param e opens the profile page which is different
+	 * for student , faculty , admin
+	 * @throws IOException
+	 */
 	public void ViewProfileHandler(ActionEvent e) throws IOException 
 	{
-		
+		/**
+		 * has three cases where the user depending on the usertype is 
+		 * redirected to the profile page
+		 */
 		if(e.getSource()== btnviewprofile)
 		{
 			System.out.println(user);
