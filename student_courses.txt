@@ -1,2 +1,4 @@
 ari@iiitd.ac.in AdvancedProgramming NumberTheory
 hj@iiitd.ac.in AdvancedProgramming DiscreteMaths 
+v@iiitd.ac.in
+s@iiitd.ac.in

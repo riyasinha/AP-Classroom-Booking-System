@@ -8,11 +8,8 @@
 <AnchorPane prefHeight="395.0" prefWidth="423.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ViewCourses_studentController">
    <children>
       <Label fx:id="lblstdcourses" layoutX="140.0" layoutY="35.0" text="Student view Courses Page" />
-      <TableView fx:id="tblcourses" layoutX="112.0" layoutY="84.0" prefHeight="200.0" prefWidth="200.0">
-        <columns>
-          <TableColumn fx:id="columncourses" prefWidth="199.0" text="Courses:" />
-        </columns>
-      </TableView>
       <Button fx:id="btnback" layoutX="186.0" layoutY="319.0" mnemonicParsing="false" onAction="#BackButtonHandler" text="Back" />
+      <ListView fx:id="listcourse" layoutX="112.0" layoutY="98.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="112.0" layoutY="81.0" prefHeight="17.0" prefWidth="200.0" text="MY COURSES:" />
    </children>
 </AnchorPane>

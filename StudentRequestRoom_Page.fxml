@@ -9,7 +9,7 @@
    <children>
       <Label fx:id="lblpage" layoutX="199.0" layoutY="14.0" text="REQUEST ROOM STUDENT" underline="true" />
       <Label fx:id="lblenterday" layoutX="57.0" layoutY="57.0" text="Enter Day:" />
-      <DatePicker fx:id="pickdate" layoutX="155.0" layoutY="53.0" />
+      <DatePicker fx:id="pickdate" layoutX="112.0" layoutY="53.0" />
       <Label fx:id="lblstarttime" layoutX="58.0" layoutY="90.0" text="Enter Start Time:" />
       <Label fx:id="lblendtime" layoutX="60.0" layoutY="259.0" text="Enter End Time:" />
       <Button fx:id="btnsearchroom" layoutX="217.0" layoutY="412.0" mnemonicParsing="false" onAction="#SearchRoomHandler" text="Search Room" />
@@ -48,5 +48,15 @@
       <RadioButton fx:id="re43" layoutX="200.0" layoutY="370.0" mnemonicParsing="false" text="04:30" toggleGroup="$end" />
       <RadioButton fx:id="re5" layoutX="322.0" layoutY="370.0" mnemonicParsing="false" text="05:00" toggleGroup="$end" />
       <RadioButton fx:id="re53" layoutX="410.0" layoutY="370.0" mnemonicParsing="false" text="05:30" toggleGroup="$end" />
+      <Label layoutX="301.0" layoutY="57.0" prefHeight="17.0" prefWidth="83.0" text="CAPACITY" />
+      <TextField fx:id="txtcapacity" layoutX="360.0" layoutY="53.0" prefHeight="25.0" prefWidth="50.0" />
+      <RadioButton fx:id="radiolecture" layoutX="417.0" layoutY="119.0" mnemonicParsing="false" text="Lecture">
+         <toggleGroup>
+            <ToggleGroup fx:id="purpose" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="radiotutorial" layoutX="417.0" layoutY="146.0" mnemonicParsing="false" text="Tutorial" toggleGroup="$purpose" />
+      <RadioButton fx:id="radioother" layoutX="417.0" layoutY="207.0" mnemonicParsing="false" text="Other" toggleGroup="$purpose" />
+      <RadioButton fx:id="radiolab" layoutX="417.0" layoutY="176.0" mnemonicParsing="false" text="Lab" toggleGroup="$purpose" />
+      <Label layoutX="419.0" layoutY="86.0" prefHeight="25.0" prefWidth="83.0" text="Purpose" />
    </children>
 </AnchorPane>

@@ -16,8 +16,8 @@ import javafx.scene.Scene;
 /**
  * This is the Main Class via which the program is run. It has the launch argument which allows us to run the booking system.
  * 
- * @author Riya Sinha
- * @author Khyati Seth
+ * @author Riya Sinha 2016079
+ * @author Khyati Seth 2016079
  *
  */
 
@@ -39,6 +39,7 @@ public class Main extends Application {
 	
 	@Override
 	public void start(Stage primaryStage) {
+		
 		try {
 			//BorderPane root = new BorderPane();
 			Parent root = FXMLLoader.load(getClass().getResource("/application/WelcomePage.fxml"));

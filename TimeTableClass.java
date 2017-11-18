@@ -1,5 +1,11 @@
 package application;
 
+/**
+ * Class time table that allows us to view the time table in the GUI
+ * contains the course name, and the timings and venue for every day of the wek for that particular course
+ * @author riyas
+ *
+ */
 public class TimeTableClass{
 
 	String course;
@@ -20,6 +26,20 @@ public class TimeTableClass{
 //	String fri_time;
 //	String fri_ven;
 	
+	/**
+	 * 
+	 * @param c course name
+	 * @param mt monday time
+	 * @param mv monday venue
+	 * @param tt tuesday time
+	 * @param tv tuesday venue
+	 * @param wt wednesday time
+	 * @param wv wednesday venue
+	 * @param tht thursday time
+	 * @param thv thursday venue
+	 * @param ft friday time
+	 * @param fv friday venue
+	 */
 	public TimeTableClass(String c,String mt, String mv, String tt,String tv, String wt, String wv, String tht, String thv, String ft, String fv)
 	{
 		this.course = c;

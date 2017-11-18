@@ -19,17 +19,19 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
 /**
- * 
- * Confirms the room number and shows the date and day 
- * and start time and end time that the user hs selected 
- *
+ * This gives the student an idea about which room is filled
+ * and which is free in the time slot that
+ * he/she has selected  
+ *  
  */
-public class BookRoom2_FacultyController extends BookRoom_FacultyController {
+public class StudentRequestRoom2_Controller extends StudentRequestRoom_Controller {
 	/**
-	 * @param btn bookroom this allows the admin to finally book 
-	 * the room making the required changes in the data base
-	 * @param roomno this is the roomno tht the admin prefers to give
+	 * @param btnc01,btnc02.... these are different handlers for different rooms
+	 * @param Label start2 this is the start time
+	 * @param Label end2 this is the end time
+	 * @param Label day2 this is the selected day
 	 */
 	@FXML
 	Button btnc01;
@@ -101,9 +103,7 @@ public class BookRoom2_FacultyController extends BookRoom_FacultyController {
 	String roomno;
 	/**
 	 * 
-	 * @param e it fetches the button of the room which is called
-	 * @param btnc01 this reads the file C01.txt and checks if the room is free in the given time slot 
-	 * or not.
+	 * @param e this handler reads the .txt file and conveys if the room is free or not.
 	 * @throws IOException
 	 * @throws ParseException
 	 */
@@ -174,9 +174,7 @@ public class BookRoom2_FacultyController extends BookRoom_FacultyController {
 	}
 	/**
 	 * 
-	 * @param e it fetches the button of the room which is called
-	 * @param btnc02 this reads the file C02.txt and checks if the room is free in the given time slot 
-	 * or not.
+	 * @param e this handler reads the .txt file and conveys if the room is free or not.
 	 * @throws IOException
 	 * @throws ParseException
 	 */
@@ -245,9 +243,7 @@ public class BookRoom2_FacultyController extends BookRoom_FacultyController {
 	}
 	/**
 	 * 
-	 * @param e it fetches the button of the room which is called
-	 * @param btnc03 this reads the file C03.txt and checks if the room is free in the given time slot 
-	 * or not.
+	 * @param e this handler reads the .txt file and conveys if the room is free or not.
 	 * @throws IOException
 	 * @throws ParseException
 	 */
@@ -316,9 +312,7 @@ public class BookRoom2_FacultyController extends BookRoom_FacultyController {
 	}
 	/**
 	 * 
-	 * @param e it fetches the button of the room which is called
-	 * @param btnc11 this reads the file C11.txt and checks if the room is free in the given time slot 
-	 * or not.
+	 * @param e this handler reads the .txt file and conveys if the room is free or not.
 	 * @throws IOException
 	 * @throws ParseException
 	 */
@@ -386,9 +380,7 @@ public class BookRoom2_FacultyController extends BookRoom_FacultyController {
 	}
 	/**
 	 * 
-	 * @param e it fetches the button of the room which is called
-	 * @param btnc12 this reads the file C12.txt and checks if the room is free in the given time slot 
-	 * or not.
+	 * @param e this handler reads the .txt file and conveys if the room is free or not.
 	 * @throws IOException
 	 * @throws ParseException
 	 */
@@ -456,9 +448,7 @@ public class BookRoom2_FacultyController extends BookRoom_FacultyController {
 	}
 	/**
 	 * 
-	 * @param e it fetches the button of the room which is called
-	 * @param btnc13 this reads the file C13.txt and checks if the room is free in the given time slot 
-	 * or not.
+	 * @param e this handler reads the .txt file and conveys if the room is free or not.
 	 * @throws IOException
 	 * @throws ParseException
 	 */
@@ -527,9 +517,7 @@ public class BookRoom2_FacultyController extends BookRoom_FacultyController {
 	}
 	/**
 	 * 
-	 * @param e it fetches the button of the room which is called
-	 * @param btnc21 this reads the file C21.txt and checks if the room is free in the given time slot 
-	 * or not.
+	 * @param e this handler reads the .txt file and conveys if the room is free or not.
 	 * @throws IOException
 	 * @throws ParseException
 	 */
@@ -597,9 +585,7 @@ public class BookRoom2_FacultyController extends BookRoom_FacultyController {
 	}
 	/**
 	 * 
-	 * @param e it fetches the button of the room which is called
-	 * @param btnc22 this reads the file C22.txt and checks if the room is free in the given time slot 
-	 * or not.
+	 * @param e this handler reads the .txt file and conveys if the room is free or not.
 	 * @throws IOException
 	 * @throws ParseException
 	 */
@@ -667,9 +653,7 @@ public class BookRoom2_FacultyController extends BookRoom_FacultyController {
 	}
 	/**
 	 * 
-	 * @param e it fetches the button of the room which is called
-	 * @param btnc23 this reads the file C23.txt and checks if the room is free in the given time slot 
-	 * or not.
+	 * @param e this handler reads the .txt file and conveys if the room is free or not.
 	 * @throws IOException
 	 * @throws ParseException
 	 */
@@ -737,9 +721,7 @@ public class BookRoom2_FacultyController extends BookRoom_FacultyController {
 	}
 	/**
 	 * 
-	 * @param e it fetches the button of the room which is called
-	 * @param btnc24 this reads the file C24.txt and checks if the room is free in the given time slot 
-	 * or not.
+	 * @param e this handler reads the .txt file and conveys if the room is free or not.
 	 * @throws IOException
 	 * @throws ParseException
 	 */
@@ -808,9 +790,7 @@ public class BookRoom2_FacultyController extends BookRoom_FacultyController {
 	}
 	/**
 	 * 
-	 * @param e it fetches the button of the room which is called
-	 * @param btns01 this reads the file S01.txt and checks if the room is free in the given time slot 
-	 * or not.
+	 * @param e this handler reads the .txt file and conveys if the room is free or not.
 	 * @throws IOException
 	 * @throws ParseException
 	 */
@@ -878,9 +858,7 @@ public class BookRoom2_FacultyController extends BookRoom_FacultyController {
 	}
 	/**
 	 * 
-	 * @param e it fetches the button of the room which is called
-	 * @param btns02 this reads the file S02.txt and checks if the room is free in the given time slot 
-	 * or not.
+	 * @param e this handler reads the .txt file and conveys if the room is free or not.
 	 * @throws IOException
 	 * @throws ParseException
 	 */
@@ -949,9 +927,7 @@ public class BookRoom2_FacultyController extends BookRoom_FacultyController {
 	}
 	/**
 	 * 
-	 * @param e it fetches the button of the room which is called
-	 * @param btnlr1 this reads the file LR1.txt and checks if the room is free in the given time slot 
-	 * or not.
+	 * @param e this handler reads the .txt file and conveys if the room is free or not.
 	 * @throws IOException
 	 * @throws ParseException
 	 */
@@ -1019,9 +995,7 @@ public class BookRoom2_FacultyController extends BookRoom_FacultyController {
 	}
 	/**
 	 * 
-	 * @param e it fetches the button of the room which is called
-	 * @param btnlr2 this reads the file LR2.txt and checks if the room is free in the given time slot 
-	 * or not.
+	 * @param e this handler reads the .txt file and conveys if the room is free or not.
 	 * @throws IOException
 	 * @throws ParseException
 	 */
@@ -1088,14 +1062,6 @@ public class BookRoom2_FacultyController extends BookRoom_FacultyController {
 		      
 		}
 	}
-	/**
-	 * 
-	 * @param e it fetches the button of the room which is called
-	 * @param btnlr3 this reads the file LR3.txt and checks if the room is free in the given time slot 
-	 * or not.
-	 * @throws IOException
-	 * @throws ParseException
-	 */
 	public void LR3Handler(ActionEvent e) throws IOException, ParseException
 	{
 		Stage stage = null;
@@ -1161,9 +1127,7 @@ public class BookRoom2_FacultyController extends BookRoom_FacultyController {
 	}
 	/**
 	 * 
-	 * @param e it fetches the button of the room which is called
-	 * @param btnlr4 this reads the file LR4.txt and checks if the room is free in the given time slot 
-	 * or not.
+	 * @param e this handler reads the .txt file and conveys if the room is free or not.
 	 * @throws IOException
 	 * @throws ParseException
 	 */
@@ -1231,8 +1195,8 @@ public class BookRoom2_FacultyController extends BookRoom_FacultyController {
 	}
 	/**
 	 * 
-	 * @param e it fetches the button to book the room
-	 * @param btnbookroom this goes to the bookgenerl pagewhere you confirmthe booking that you have to do.
+	 * @param e this redirects to the Request Room page for the 
+	 * student to request his room to the admin
 	 * @throws IOException
 	 * @throws ParseException
 	 */
@@ -1248,10 +1212,10 @@ public class BookRoom2_FacultyController extends BookRoom_FacultyController {
 			String starttimefinal = lblstart2.getText();		
 			String endtimefinal = lblend2.getText();
 			String enterroomfinal = lblenter.getText();
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/BookRoomGeneral.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/RequestRoom.fxml"));
         	stage = (Stage)btnbookroom.getScene().getWindow();
         	root = (Parent)loader.load();
-        	BookRoomGeneral_Controller bookroom = loader.<BookRoomGeneral_Controller>getController();
+        	RequestRoom_Controller bookroom = loader.<RequestRoom_Controller>getController();
         	SimpleDateFormat format1=new SimpleDateFormat("dd/MM/yyyy");
 			  Date dt1=format1.parse(datestr);
 			  DateFormat format2=new SimpleDateFormat("EEEE"); 
@@ -1283,7 +1247,7 @@ public class BookRoom2_FacultyController extends BookRoom_FacultyController {
 		if(e.getSource()== btnback)
 		{
 			stage = (Stage) btnback.getScene().getWindow();
-			root = FXMLLoader.load(getClass().getResource("/application/BookRoom_FacultyPage.fxml"));
+			root = FXMLLoader.load(getClass().getResource("/application/StudentRequestRoom_Page.fxml"));
 			 
 		}
 		

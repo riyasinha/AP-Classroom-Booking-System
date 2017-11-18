@@ -131,7 +131,20 @@ public class StudentRequestRoom_Controller extends WelcomePageController {
 	@FXML
 	private RadioButton re53;
 	
+	@FXML
+	private RadioButton radiotutorial;
 	
+	@FXML
+	private RadioButton radiolab;
+	
+	@FXML
+	private RadioButton radioother;
+	
+	@FXML
+	private RadioButton radiolecture;
+	
+	@FXML
+	private TextField txtcapacity;
 	
 	
 /*<?xml version="1.0" encoding="UTF-8"?>
@@ -186,6 +199,8 @@ public class StudentRequestRoom_Controller extends WelcomePageController {
 	String endtime;
 	String selectdate;
 	int idno;
+	String purpose;
+	String capacity;
 	
 	public void SearchRoomHandler(ActionEvent e)throws IOException
 	{
@@ -194,7 +209,23 @@ public class StudentRequestRoom_Controller extends WelcomePageController {
 		
 		if(e.getSource()== btnsearchroom)
 		{
-			
+			capacity = txtcapacity.getText();	
+			  if(radiolab.isSelected())	
+			  {
+				  purpose = "lab";
+			  }
+			  if(radiolecture.isSelected())	
+			  {
+				  purpose = "lecture";
+			  }
+			  if(radiotutorial.isSelected())	
+			  {
+				  purpose = "tutorial";
+			  }
+			  if(radioother.isSelected())	
+			  {
+				  purpose = "other";
+			  }
 		      if(rs11.isSelected())
 		      {
 		    	  starttime = "11:00";

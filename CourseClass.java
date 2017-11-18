@@ -2,7 +2,29 @@ package application;
 
 import java.util.ArrayList;
 
+/**
+ * Course class that contains all the attributes of the course
+ * 
+ * @author riyas
+ *
+ */
 public class CourseClass {
+	
+	/**
+	 * @param postconditions
+	 *  @param course
+	 *   @param professor
+	 *    @param coursecode
+	 *     @param precondtions
+	 *      @param acronym
+	 *       @param credits
+	 *        @param coursetype
+	 *         @param monday
+	 *          @param tuesday
+	 *           @param wednesday
+	 *            @param thursday
+	 *             @param friday
+	 */
 	String postconditions="";
 	String course = "";
 	String professor = "";

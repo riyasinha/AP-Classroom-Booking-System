@@ -68,3 +68,5 @@ Friday 04:00 false 11
 Friday 04:30 false 12
 Friday 05:00 false 13
 Friday 05:30 false 14
+Wednesday 04:00 true * 11
+Wednesday 05:30 true * 14

@@ -1,3 +1,5 @@
 
 ari@iiitd.ac.in laa Student Male ari roy
 hj@iiitd.ac.in hoo Faculty Female halio jao
+v@iiitd.ac.in lo Faculty Male vivek ku
+s@iiitd.ac.in ok Admin Female sheetu ahuja

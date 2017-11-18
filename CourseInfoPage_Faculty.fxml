@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="407.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CourseInfo_FacultyController">
+   <children>
+      <Label fx:id="lblpage" layoutX="161.0" layoutY="14.0" text="COURSE INFORMATION" />
+      <Label fx:id="lblfaculty" layoutX="35.0" layoutY="65.0" text="Course Faculty:" />
+      <TextField fx:id="txtfaculty" editable="false" layoutX="197.0" layoutY="61.0" prefHeight="25.0" prefWidth="202.0" />
+      <Label fx:id="lblcode" layoutX="35.0" layoutY="95.0" text="Course Code:" />
+      <Label fx:id="lbltype" layoutX="36.0" layoutY="127.0" text="Course Type:" />
+      <Label fx:id="lblcredits" layoutX="35.0" layoutY="163.0" text="Course Credits:" />
+      <TextField fx:id="txtcode" editable="false" layoutX="197.0" layoutY="91.0" prefHeight="25.0" prefWidth="202.0" />
+      <TextField fx:id="txttype" editable="false" layoutX="197.0" layoutY="123.0" prefHeight="25.0" prefWidth="202.0" />
+      <TextField fx:id="txtcredits" editable="false" layoutX="197.0" layoutY="159.0" prefHeight="25.0" prefWidth="202.0" />
+      <TextArea fx:id="txtpost" editable="false" layoutX="197.0" layoutY="227.0" prefHeight="96.0" prefWidth="202.0" />
+      <Label fx:id="lblpost" layoutX="36.0" layoutY="248.0" text="Post Conditions:" />
+      <Button fx:id="btnadd" layoutX="95.0" layoutY="330.0" mnemonicParsing="false" onAction="#AddCourseHandler" text="ADD COURSE" />
+      <Button fx:id="btnback" layoutX="272.0" layoutY="330.0" mnemonicParsing="false" onAction="#BackButtonHandler" text="BACK" />
+      <TextField fx:id="txtacron" editable="false" layoutX="197.0" layoutY="191.0" prefHeight="25.0" prefWidth="202.0" />
+      <Label fx:id="lblacron" layoutX="39.0" layoutY="195.0" text="Course Acronym:" />
+   </children>
+</AnchorPane>
