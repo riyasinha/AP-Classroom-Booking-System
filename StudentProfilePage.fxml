@@ -9,7 +9,6 @@
 
 <AnchorPane prefHeight="356.0" prefWidth="547.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StudentProfilePageController">
    <children>
-      <BorderPane layoutX="-113.0" layoutY="-125.0" prefHeight="200.0" prefWidth="200.0" />
       <Label fx:id="lblprofilepage" layoutX="198.0" layoutY="2.0" prefHeight="25.0" prefWidth="152.0" text="STUDENT PROFILE PAGE">
          <font>
             <Font size="14.0" />
@@ -20,7 +19,7 @@
       <Label fx:id="displaytype" layoutX="428.0" layoutY="147.0" prefHeight="17.0" prefWidth="108.0" text="******user**********" />
       <Button fx:id="btnviewreq" layoutX="36.0" layoutY="63.0" mnemonicParsing="false" onAction="#ViewRoomRequestsHandler" text="View Room Requests" />
       <Button fx:id="btnviewcour" layoutX="36.0" layoutY="164.0" mnemonicParsing="false" onAction="#ViewCoursessHandler" text="View Courses" />
-      <Button fx:id="btnreqroom" layoutX="40.0" layoutY="114.0" mnemonicParsing="false" text="Request Room" />
+      <Button fx:id="btnreqroom" layoutX="40.0" layoutY="114.0" mnemonicParsing="false" onAction="#RequestRoomHandler" text="Request Room" />
       <Button fx:id="btnaddcour" layoutX="38.0" layoutY="307.0" mnemonicParsing="false" text="Add Courses" />
       <Button fx:id="btnviewtt" layoutX="36.0" layoutY="214.0" mnemonicParsing="false" onAction="#ViewTimeTableHandler" text="View Time Table" />
       <Button fx:id="btnuploadphoto" layoutX="35.0" layoutY="258.0" mnemonicParsing="false" text="Upload Photo" />

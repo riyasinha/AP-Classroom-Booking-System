@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="331.0" prefWidth="485.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BookRoom2_FacultyController">
+<AnchorPane prefHeight="331.0" prefWidth="485.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StudentRequestRoom2_Controller">
    <children>
       <GridPane gridLinesVisible="true" layoutX="38.0" layoutY="136.0" prefHeight="157.0" prefWidth="272.0">
         <columnConstraints>
@@ -46,11 +46,10 @@
       <Label layoutX="47.0" layoutY="37.0" prefHeight="22.0" prefWidth="42.0" text="Date:" />
       <Label layoutX="47.0" layoutY="66.0" text="Start Time:" />
       <Label layoutX="47.0" layoutY="94.0" text="End Time:" />
-      <Button fx:id="btnbookroom" layoutX="364.0" layoutY="190.0" mnemonicParsing="false" onAction="#BookRoomHandler" text="Book Room" />
+      <Button fx:id="btnbookroom" layoutX="364.0" layoutY="190.0" mnemonicParsing="false" onAction="#BookRoomHandler" text="Request Room" />
       <Label fx:id="lbldate2" layoutX="139.0" layoutY="40.0" text="***Date***" />
       <Label fx:id="lblstart2" layoutX="139.0" layoutY="66.0" text="***starttime***" />
       <Label fx:id="lblend2" layoutX="139.0" layoutY="94.0" text="***endtime***" />
-      <Button fx:id="btncancel" layoutX="364.0" layoutY="159.0" mnemonicParsing="false" text="Cancel Room" />
       <Label fx:id="lblenter" layoutX="359.0" layoutY="49.0" text="room" visible="false" />
    </children>
 </AnchorPane>

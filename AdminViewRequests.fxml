@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="398.0" prefWidth="431.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ViewRoomRequest_StudentController">
+   <children>
+      <AnchorPane layoutX="-92.0" layoutY="-125.0" prefHeight="200.0" prefWidth="200.0" />
+      <TableView fx:id="tblrequests" layoutX="68.0" layoutY="45.0" prefHeight="285.0" prefWidth="295.0">
+        <columns>
+          <TableColumn fx:id="columnreq" prefWidth="150.0" text="Request" />
+          <TableColumn fx:id="columnstatus" prefWidth="144.0" text="Status" />
+        </columns>
+      </TableView>
+      <Label fx:id="lblstdreq" layoutX="151.0" layoutY="14.0" text="Admint View Requests Page" />
+      <Button fx:id="btnback" layoutX="190.0" layoutY="346.0" mnemonicParsing="false" onAction="#BackButtonHandler" text="Back" />
+   </children>
+</AnchorPane>

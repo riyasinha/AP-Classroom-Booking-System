@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="518.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BookRoom_FacultyController">
+<AnchorPane prefHeight="518.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StudentRequestRoom_Controller">
    <children>
-      <Label fx:id="lblpage" layoutX="199.0" layoutY="14.0" text="BOOK ROOM FACULTY" underline="true" />
+      <Label fx:id="lblpage" layoutX="199.0" layoutY="14.0" text="REQUEST ROOM STUDENT" underline="true" />
       <Label fx:id="lblenterday" layoutX="57.0" layoutY="57.0" text="Enter Day:" />
       <DatePicker fx:id="pickdate" layoutX="155.0" layoutY="53.0" />
       <Label fx:id="lblstarttime" layoutX="58.0" layoutY="90.0" text="Enter Start Time:" />
