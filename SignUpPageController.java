@@ -23,11 +23,17 @@ import java.io.BufferedWriter;
 import java.util.Scanner;
 
 
-
+/**
+ * This Page handles the SIGNUP process for a new user.
+ * 
+ * @author riyas
+ *
+ */
 
 public class SignUpPageController extends WelcomePageController {
 	
 	public static final String FILENAME = "C:\\Users\\riyas\\eclipse-workspace-oxygen\\AP Project - ClassRoom Booking\\src\\users.txt";
+    //public static final String file_name = "C:\\Users\\riyas\\eclipse-workspace-oxygen\\AP Project - ClassRoom Booking\\src\\student_courses.txt";
 	static Scanner sc = new Scanner(System.in);
 	static String email;
 	static String Firstname;
@@ -99,11 +105,15 @@ public class SignUpPageController extends WelcomePageController {
 	private Button btnsignup;
 	
 	
+    public static final String file_name = "C:\\Users\\riyas\\eclipse-workspace-oxygen\\AP Project - ClassRoom Booking\\src\\student_courses.txt";
+
 	
-	
-	
-	
-	
+	/**
+	 * New User Handler is responsible for handling the sign up process
+	 * Here the user enters all the details and the data is stored accordingly in the database which will be used further to retrieve information for Login Process 
+	 * @param e ActionEvent to handle the button - it redirects to the welcome page
+	 * @throws IOException
+	 */
 	public void NewUserHandler(ActionEvent e) throws IOException
 	{
 		if(e.getSource()== btnsignup)
@@ -139,32 +149,85 @@ public class SignUpPageController extends WelcomePageController {
 				BufferedWriter bw = new BufferedWriter(fw);
 				bw.newLine();
 				
-				try {
-					email = txtemailid.getText();
-					password = txtpswd.getText();
-					//System.out.println(name + " " + password);
-					bw.write(email + " " +password + " " + uservalue + " " + gendervalue + " " + Firstname + " " +Lastname);
-					
-					
-
-				} 
+//				FileWriter fc = new FileWriter(file_name,true);
+//				BufferedWriter bc = new BufferedWriter(fc);
+//				bc.newLine();
+				password = txtpswd.getText();
+				email = txtemailid.getText();
+				bw.write(email + " " +password + " " + uservalue + " " + gendervalue + " " + Firstname + " " +Lastname);
+				System.out.println(email + " " +password + " " + uservalue + " " + gendervalue + " " + Firstname + " " +Lastname);
 				
-				finally {
+				if (bw != null)
+					bw.close();
+				if (fw != null)
+					fw.close();	
+				
 
-					try {
-
-						if (bw != null)
-							bw.close();
-
-						if (fw != null)
-							fw.close();
-
-					} catch (IOException ex) {
-
-						ex.printStackTrace();
-
-					}
-				}
+				FileWriter fc = new FileWriter(file_name,true);
+				BufferedWriter bc = new BufferedWriter(fc);
+				bc.newLine();
+				
+				bc.write(email);
+				System.out.println(email);
+				
+				if (bc != null)
+					bc.close();
+				if (fc != null)
+					fc.close();	
+//				try {
+//					
+//					
+//
+//					//System.out.println(name + " " + password);
+//					
+////					bc.write(email);
+////					System.out.println(email);
+//				} 
+//				finally {
+//					try {
+//
+//						
+//
+//					} catch (IOException ex) {
+//
+//						ex.printStackTrace();
+//
+//					}
+////					try {
+////						if (bc != null)
+////							bc.close();
+////
+////						if (fc != null)
+////							fc.close();
+////					}
+////					catch (IOException ex) {
+////
+////						ex.printStackTrace();
+////
+////					}
+//					
+//					
+//				}
+//				try {
+//					email = txtemailid.getText();
+//					bc.write(email);
+//					System.out.println(email);
+//				}
+//				finally {
+//					try {
+//						if (bc != null)
+//							bc.close();
+//
+//						if (fc != null)
+//							fc.close();
+//					}
+//					catch (IOException ex) {
+//
+//						ex.printStackTrace();
+//
+//					}
+//				}
+				
 				
 				System.out.println("Congrats");
 	        	System.out.println(user);
@@ -186,103 +249,5 @@ public class SignUpPageController extends WelcomePageController {
 	
 
 
-/*package application;
-
-import java.io.IOException;
-
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.util.Scanner;
-
-
-public class SignUpPageController {
-	
-	public static final String FILENAME = "C:\\Users\\khyati\\eclipse-workspace-oxygen\\try\\src\\jaimatadi.txt";
-	static Scanner sc = new Scanner(System.in);
-	static String name;
-	static String password;
-	@FXML
-	private Label lblname;
-	
-	@FXML
-	private Label lbltype;
-	
-	@FXML
-	private Label lblpswd;
-	
-	@FXML
-	private Label lblrepswd;
-	
-	@FXML
-	private Label lblsignup;
-	
-	@FXML
-	private TextField txtfirstname;
-	
-	@FXML
-	private ChoiceBox txtuser;
-	
-	@FXML
-	private PasswordField txtpswd;
-	
-	@FXML
-	private PasswordField txtrepswd;
-	
-	@FXML
-	private Button btnsignup;
-	
-	
-	public void NewUserHandler(ActionEvent e) throws IOException
-	{
-		if(e.getSource()== btnsignup)
-		{
-			//if(txtpswd.getText()== txtrepswd.getText())
-			//{	
-				
-				 
-				FileWriter fw = new FileWriter(FILENAME,true);
-				BufferedWriter bw = new BufferedWriter(fw);
-				bw.newLine();
-				
-				try {
-					name = txtfirstname.getText();
-					password = txtpswd.getText();
-					bw.write(name + " " +password);
-					
-					
-
-				} 
-				
-				finally {
-
-					try {
-
-						if (bw != null)
-							bw.close();
-
-						if (fw != null)
-							fw.close();
-
-					} catch (IOException ex) {
-
-						ex.printStackTrace();
-
-					}
-				}
-			}
-		}
-	}
-	
-	*/
 
 
